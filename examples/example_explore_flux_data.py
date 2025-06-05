@@ -34,4 +34,4 @@ flux.get_attributes("AdelaideRiver", variables=["AH", "CO2"])
 
 # Get subsets of 30min dataset from multiple sites, slice to 2 variables
 subsets = flux.get_subsets(["AdelaideRiver", "Warra"], "2024_v2", "L3", ["AH", "CO2"])
-ptint(sites)
+print(sites)

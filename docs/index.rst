@@ -22,7 +22,7 @@ Or install from repository:
 
 .. code-block:: bash
 
-    pip install git+https://github.com/ternaustralia/terndata.flux@<version>
+    pip install git+https://github.com/ternaustralia/terndata.flux
 
 
 Getting started

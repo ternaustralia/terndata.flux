@@ -17,7 +17,7 @@ To run unittests:
 ### Installation
 Install from repository:
 
-    pip install git+https://github.com/ternaustralia/terndata.flux@<version>
+    pip install git+https://github.com/ternaustralia/terndata.flux
 
 ### API Methods
 See the [API documentation](./docs/api_doc/html/index.html) generated from the code (see above).
