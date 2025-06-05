@@ -2,7 +2,7 @@ import os
 
 from requests.exceptions import HTTPError
 
-from tern_data_package import utils
+from terndata.flux import utils
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
