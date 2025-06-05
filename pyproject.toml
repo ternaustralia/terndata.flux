@@ -30,8 +30,7 @@ requires = ["setuptools", "setuptools_scm[toml]"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-write_to = "src/terndata.flux/version.py"
-#version_file = "src/terndata.flux/version.py"
+write_to = "src/terndata/flux/version.py"
 fallback_version = "0.0.0.dev0"
 
 [tool.pytest.ini_options]
