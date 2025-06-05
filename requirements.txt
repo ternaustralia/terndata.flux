@@ -1,0 +1,15 @@
+# See https://docs.xarray.dev/en/stable/getting-started-guide/installing.html
+xarray
+numpy
+pandas
+geopandas
+netCDF4
+requests
+# Required for export utilities
+python-dateutil
+pytz
+xlrd
+xlsxwriter
+defusedxml
+# Required for plot
+matplotlib

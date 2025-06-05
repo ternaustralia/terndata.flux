@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2">
+  <service name="all" serviceType="compound" base="">
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+    <service name="dap4" serviceType="DAP4" base="/thredds/dap4/" />
+    <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+    <service name="wcs" serviceType="WCS" base="/thredds/wcs/" />
+    <service name="wms" serviceType="WMS" base="/thredds/wms/" />
+    <service name="ncssGrid" serviceType="NetcdfSubset" base="/thredds/ncss/grid/" />
+    <service name="ncssPoint" serviceType="NetcdfSubset" base="/thredds/ncss/point/" />
+    <service name="cdmremote" serviceType="CdmRemote" base="/thredds/cdmremote/" />
+    <service name="iso" serviceType="ISO" base="/thredds/iso/" />
+    <service name="ncml" serviceType="NCML" base="/thredds/ncml/" />
+    <service name="uddc" serviceType="UDDC" base="/thredds/uddc/" />
+  </service>
+  <service name="lands" serviceType="compound" base="">
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+    <service name="dap4" serviceType="DAP4" base="/thredds/dap4/" />
+    <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+    <service name="wcs" serviceType="WCS" base="/thredds/wcs/" />
+    <service name="wms" serviceType="WMS" base="/thredds/wms/" />
+    <service name="ncssGrid" serviceType="NetcdfSubset" base="/thredds/ncss/grid/" />
+    <service name="ncssPoint" serviceType="NetcdfSubset" base="/thredds/ncss/point/" />
+    <service name="ncml" serviceType="NCML" base="/thredds/ncml/" />
+    <service name="uddc" serviceType="UDDC" base="/thredds/uddc/" />
+    <service name="iso" serviceType="ISO" base="/thredds/iso/" />
+  </service>
+  <service name="httpaccess" serviceType="compound" base="">
+    <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+  </service>
+  <service name="dap" serviceType="compound" base="">
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC?dataset=" />
+    <service name="dap4" serviceType="DAP4" base="/thredds/dap4?dataset=" />
+  </service>
+  <service name="http_dap" serviceType="compound" base="">
+    <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+    <service name="dap4" serviceType="DAP4" base="/thredds/dap4/" />
+    <service name="ncssGrid" serviceType="NetcdfSubset" base="/thredds/ncss/grid/" />
+    <service name="ncssPoint" serviceType="NetcdfSubset" base="/thredds/ncss/point/" />
+  </service>
+  <dataset name="ozflux/AdelaideRiver/">
+    <property name="DatasetScan" value="true" />
+    <metadata inherited="true">
+      <serviceName>http_dap</serviceName>
+    </metadata>
+    <catalogRef xlink:href="2024_v1/catalog.xml" xlink:title="2024_v1" ID="ecosystem_process/ozflux/AdelaideRiver/2024_v1" name="2024_v1">
+      <property name="DatasetScan" value="true" />
+    </catalogRef>
+    <catalogRef xlink:href="2024_v2/catalog.xml" xlink:title="2024_v2" ID="ecosystem_process/ozflux/AdelaideRiver/2024_v2" name="2024_v2">
+      <property name="DatasetScan" value="true" />
+    </catalogRef>
+  </dataset>
+</catalog>
