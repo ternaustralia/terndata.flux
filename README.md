@@ -12,6 +12,7 @@ Build the API documentation:
     make doc
 
 To run unittests:
+
     make test
 
     OR
