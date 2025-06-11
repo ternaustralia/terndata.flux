@@ -1,4 +1,5 @@
 # See https://docs.xarray.dev/en/stable/getting-started-guide/installing.html
+typing-extensions
 xarray
 numpy
 pandas
