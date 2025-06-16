@@ -1,6 +1,6 @@
 # terndata.flux
 
-This is a Python package for working with TERN flux data. It provides API methods to explore and access flux datasets from the TERN THREDDS/DAP server (i.e. dap.tern.org.au).
+This is a Python package to work with TERN flux data. It provides API methods to explore and access flux datasets from the TERN THREDDS/DAP server (i.e. dap.tern.org.au).
 
 ### Build
 Buid the package wheel locally (docker required):
