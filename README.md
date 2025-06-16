@@ -129,5 +129,4 @@ The following examples are provided to help you get started, with sample output 
 
 ### Who do I talk to?
 
-* Repo owner or admin
-* Other community or team contact
+* please contact esupport@tern.org.au for any issues in the repository
