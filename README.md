@@ -26,7 +26,7 @@ Install from repository:
     pip install git+https://github.com/ternaustralia/terndata.flux
 
 ### API Methods
-See the [API documentation](./docs/api_doc/html/index.html) generated from the code (see above).
+See the [API documentation](https://terndataflux-api-doc.readthedocs.io) generated from the code (see above).
 
 ### Getting started
 The following examples are provided to help you get started, with sample output (as indicated by >>>) where appropriate:
