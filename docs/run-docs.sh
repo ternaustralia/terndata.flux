@@ -12,7 +12,7 @@ apt install -y python3-sphinx
 
 pip install '.[docs]'
 
-pip install -r requirements-docs.txt
+pip install -r docs/requirements.txt
 
 cd docs
 make "$@"
