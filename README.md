@@ -126,6 +126,7 @@ The following examples are provided to help you get started, with sample output 
 * defusedxml
 * xlsxwriter
 * xlrd
+* matplotlib
 
 ### Who do I talk to?
 
