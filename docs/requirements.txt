@@ -1,4 +1,4 @@
 sphinx
 sphinx-autobuild
-sphinxcontrib_openapi
+sphinxcontrib-openapi
 sphinx-rtd-theme
