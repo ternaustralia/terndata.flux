@@ -10,19 +10,11 @@ availble from `TERN THREDDS server <https://dap.tern.org.au/>`_.
 Installation
 -------------
 
-Build the package wheel and install locally:
+Install from pypi:
 
 .. code-block:: bash
 
-    python -m build
-    pip install <terndata.flux-xxx.whl>
-
-
-Or install from repository:
-
-.. code-block:: bash
-
-    pip install git+https://github.com/ternaustralia/terndata.flux
+    pip install terndata.flux
 
 
 Getting started

@@ -21,9 +21,10 @@ To run unittests:
         ./ci-scripts/run-tests.sh
 
 ### Installation
-Install from repository:
+Install from pypi:
 
-    pip install git+https://github.com/ternaustralia/terndata.flux
+    pip install terndata.flux
+
 
 ### API Methods
 See the [API documentation](https://terndata-flux.readthedocs.io) generated from the code (see above).
