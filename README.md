@@ -43,15 +43,15 @@ The following examples are provided to help you get started, with sample output 
     ...
 
     # get the versions available for the site
-    versions = flux.get_versions("AdelaideRiver")
+    flux.get_versions("AdelaideRiver")
     >>> ['2020', '2021_v1', '2022_v1', '2022_v2', '2023_v1', '2023_v2', '2024_v1', '2024_v2']
     
     # Get the processing-levels available for a site and version
-    processing_levels = flux.get_processing_levels("AdelaideRiver", "2024_v2")
+    flux.get_processing_levels("AdelaideRiver", "2024_v2")
     >>> ['L3', 'L4', 'L5', 'L6']
 
     # Get a 30min dataset from a site, and of a version and processing-level.
-    30min_ds = flux.get_dataset("AdelaideRiver", "2024_v2", "L3")
+    flux.get_dataset("AdelaideRiver", "2024_v2", "L3")
     >>> <xarray.Dataset> Size: 18MB
     Dimensions:             (time: 28070, latitude: 1, longitude: 1)
     Coordinates:
@@ -61,7 +61,7 @@ The following examples are provided to help you get started, with sample output 
     ...
 
     # Get a daily dataset
-    daily_ds = get_l6_daily("AdelaideRiver", "2024_v2")
+    flux.get_l6_dataset("AdelaideRiver", "2024_v2", "daily")
 
     # Get 30min datasets from multiple sites
     sites = ["AdelaideRiver", "Warra"]
@@ -108,8 +108,8 @@ The following examples are provided to help you get started, with sample output 
     ...
 
     # Export dataset as Excel workbook
-    flux.export_as_excel("/home/user/excel_output.xlxs", "AdelaideRiver", "2024_v2", "L6")
-    >>> '/home/user/excel_output.xlxs'
+    flux.export_as_excel("/home/user/excel_output.xlsx", "AdelaideRiver", "2024_v2", "L6")
+    >>> '/home/user/excel_output.xlsx'
 
     # Export dataset as oneflux csv format
     flux.export_oneflux_csv("output_dir", "AdelaideRiver", "2024_v2", "L4")
