@@ -5,7 +5,7 @@ This module provides API methods for accessing TERN flux data.
 
 import os
 from datetime import datetime
-from multiprocessing import Pool
+from multiprocessing import Pool, set_start_method
 
 import geopandas as gpd
 import pandas as pd
@@ -226,9 +226,11 @@ def get_sites() -> gpd.GeoDataFrame:
         raise Exception(f"Error: fail to get sites: {str(e)}") from e  # noqa: DAR401
 
     # Get locations
-    with Pool(processes=10) as pool:
+    # Use spawn worker process to avoid issue with requests.Session not being thread safe.
+    # TODO: Shall use thread instead of multiprocessor. https://realpython.com/python-concurrency
+    set_start_method("spawn", force=True)
+    with Pool(processes=6) as pool:
         locations = pool.map(_get_location, sites)
-
     # convert into GeoDataFrame
     df = pd.DataFrame.from_dict(locations)
     return gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude))
