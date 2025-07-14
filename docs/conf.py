@@ -27,6 +27,7 @@ extensions = [
     # "sphinx_issues",
     # "sphinx_tabs.tabs",
     "sphinx_rtd_theme",
+    "sphinx_github_changelog",
 ]
 
 intersphinx_mapping = {

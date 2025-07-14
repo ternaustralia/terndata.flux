@@ -2,4 +2,5 @@ sphinx
 sphinx-autobuild
 sphinxcontrib-openapi
 sphinx-rtd-theme
+sphinx_github_changelog
 git+https://github.com/ternaustralia/terndata.flux
