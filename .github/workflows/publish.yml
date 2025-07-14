@@ -28,3 +28,13 @@ jobs:
           python -m build  # python setup.py sdist bdist_wheel
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Build with Read the Docs
+        uses: readthedocs/readthedocs-build@v1
+        with:
+          project: 'terndata.flux'
+          version: 'latest'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload the generated readthedocs doc artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_build/html'
