@@ -29,7 +29,7 @@ jobs:
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
       - name: Build with Read the Docs
-        uses: readthedocs/readthedocs-build@v1
+        uses: readthedocs/readthedocs-build@v2
         with:
           project: 'terndata.flux'
           version: 'latest'
