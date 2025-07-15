@@ -32,6 +32,7 @@ See the [API documentation](https://terndata-flux.readthedocs.io) generated from
 ### Getting started
 The following examples are provided to help you get started, with sample output (as indicated by >>>) where appropriate:
 
+```python
     import terndata.flux as flux 
     # Get sites where flux data is available
     flux.get_sites()
@@ -114,7 +115,8 @@ The following examples are provided to help you get started, with sample output 
     # Export dataset as oneflux csv format
     flux.export_oneflux_csv("output_dir", "AdelaideRiver", "2024_v2", "L4")
     >>> ['output_dir/AU-Adr_qcv_2007.csv', 'output_dir/AU-Adr_qcv_2008.csv', 'output_dir/AU-Adr_qcv_2009.csv']
-    
+```
+
 ### Dependencies
 
 * xarray
@@ -132,3 +134,6 @@ The following examples are provided to help you get started, with sample output 
 ### Who do I talk to?
 
 * please contact esupport@tern.org.au for any issues in the repository
+
+### How to cite
+Terrestrial Ecosystem Research Network (2025). terndata.flux: A Python package for Accessing TERN Flux data. https://pypi.org/project/terndata.flux/
