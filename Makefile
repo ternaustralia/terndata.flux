@@ -15,7 +15,7 @@ check-lint:
 check: check-lint check-types
 
 doc:
-	docker run --rm -it \
+	docker run --rm -it --env-file envvars \
 	  -v $(CURDIR):/workspace \
 	  -w /workspace \
 	  -u root \

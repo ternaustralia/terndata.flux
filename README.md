@@ -7,7 +7,7 @@ Buid the package wheel locally (docker required):
     
     make build
 
-Build the API documentation:
+Build the API documentation (set a Github personal token in envvars first):
 
     make doc
 
@@ -17,7 +17,7 @@ To run unittests:
 
     OR
     
-    Run the script below:
+    Run the script below in Python virtual environment:
         ./ci-scripts/run-tests.sh
 
 ### Installation
