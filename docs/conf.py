@@ -63,10 +63,10 @@ html_theme_options = {
     "prev_next_buttons_location": "both",
 }
 html_context = {
-    "display_bitbucket": True,  # Integrate Bitbucket
-    "bitbucket_user": "terndatateam",  # Username
-    "bitbucket_repo": "terndata.flux",  # Repo name
-    "bitbucket_version": "main",  # Version
+    "display_github": True,  # Integrate Github
+    "github_user": "ternaustralia",  # Username
+    "github_repo": "terndata.flux",  # Repo name
+    "github_version": "main",  # Version
     "conf_py_path": "/docs/",  # Path in the checkout to the docs root
 }
 # html_static_path = ["_static"]
