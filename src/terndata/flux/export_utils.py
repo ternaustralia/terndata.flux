@@ -333,7 +333,9 @@ def write_csv_oneflux_year(ds: xarray.Dataset, year: int, outdir: str) -> str:
         # Copy the variable data for the year
         if var == "VPD":
             # For VPD, do unit conversion from Kpa to hpa
-            data[var]["data"][a1] = numpy.array([i[0][0]/10.0 for i in ds.variables[var].data[b1]])
+            data[var]["data"][a1] = numpy.array(
+                [i[0][0] / 10.0 for i in ds.variables[var].data[b1]]
+            )
         else:
             data[var]["data"][a1] = numpy.array([i[0][0] for i in ds.variables[var].data[b1]])
 

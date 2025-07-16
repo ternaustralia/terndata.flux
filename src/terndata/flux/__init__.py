@@ -1,3 +1,4 @@
+from . import export_utils, utils
 from .flux_api import (
     export_as_excel,
     export_oneflux_csv,
@@ -16,7 +17,6 @@ from .flux_api import (
     get_versions,
 )
 
-from . import export_utils, utils
 # Hide these modules
 del export_utils
 # del flux_api
