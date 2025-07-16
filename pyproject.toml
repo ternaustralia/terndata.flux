@@ -52,6 +52,9 @@ pythonpath = [
     ".", "src"
 ]
 
+[tool.mypy]
+disable_error_code = ["import-untyped"]
+
 [tool.coverage.run]
 source_pkgs = ["terndata.flux"]
 omit = ["tests/"]

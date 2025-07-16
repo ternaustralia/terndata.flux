@@ -85,7 +85,7 @@ def get_catalog_url(obj: str, params: dict = {}) -> str:  # noqa: B006
     }
     if obj not in url_subpath:
         raise ValueError(f"Invalid '{obj}' catalog item object")
-    subpath = url_subpath.get(obj).format_map(params)
+    subpath = url_subpath[obj].format_map(params)
     return url.format(subpath)
 
 

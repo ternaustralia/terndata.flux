@@ -365,13 +365,13 @@ def get_subset(
         version = max(get_versions(site))
 
     dataset = get_dataset(site, version, processing_level, missing_as_nan)
-    # check if variables specified are valid
-    for var in variables:
-        if var not in dataset.variables:
-            raise Exception(
-                f"Error: fail to get subset for site '{site}': variable '{var}' not found"
-            )  # noqa: DAR401
     if variables:
+        # check if variables specified are valid
+        for var in variables:
+            if var not in dataset.variables:
+                raise Exception(
+                    f"Error: fail to get subset for site '{site}': variable '{var}' not found"
+                )  # noqa: DAR401
         qcFlags = []
         if keep_qcflags:
             # Add the corresponding QC flags if they exist
