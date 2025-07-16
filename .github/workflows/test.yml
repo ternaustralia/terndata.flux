@@ -1,7 +1,7 @@
 name: Run unittest test using tox
 
 on: 
-  push
+  push:
     branches:
       - main
     tags:
@@ -14,7 +14,6 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: ["3.10", "3.11", "3.12", "3.13"]
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
