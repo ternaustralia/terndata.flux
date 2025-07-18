@@ -136,4 +136,4 @@ The following examples are provided to help you get started, with sample output 
 * please contact esupport@tern.org.au for any issues in the repository
 
 ### How to cite
-Terrestrial Ecosystem Research Network (2025). terndata.flux: A Python package for Accessing TERN Flux data. https://pypi.org/project/terndata.flux/
+Yong Liaw, Gerhard Weis, Javier Sanchez Gonzalez, Siddeswara Guru, Peter Isaac, Ian McHugh. terndata.flux: A Python package for Accessing TERN Flux data. https://pypi.org/project/terndata.flux/
