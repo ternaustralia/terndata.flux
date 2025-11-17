@@ -40,9 +40,11 @@ def get_catalog_items(url: str, itype: str = "catalogRef") -> dict[str, str]:
             # dataset name: i.e. AdelaideRiver_L6_Daily.nc
             # This assumes daily, monthly datasets, etc end with daily, monthly, etc in their
             # dataset name.
-            name = item["name"]
-            # Look for dataset ncml file instead of netcdf file
-            if name.endswith(".ncml"):
+            name, ext = os.path.splitext(item["name"])
+            # Look for dataset ncml file and netcdf file. But return the ncml file if found,
+            # otherwise the 1st netcdf file found as backup. 
+            # Note this is OK for single netcdf file.
+            if ext in (".nc", ".ncml"):
                 parts = os.path.splitext(name)[0].split("_")
                 ds_name = DEFAULT_DATASET
                 if len(parts) >= 3 and parts[-1].lower() in [
@@ -52,10 +54,11 @@ def get_catalog_items(url: str, itype: str = "catalogRef") -> dict[str, str]:
                     "cumulative",
                     "summary",
                 ]:
-                    ds_name = parts[-1].lower()
-                references[ds_name] = url.replace("catalog.xml", item["name"]).replace(
-                    "/catalog/", "/dodsC/"
-                )
+                    ds_name = parts[-1].lower() 
+                if ds_name not in references or ext == ".ncml":
+                    references[ds_name] = url.replace("catalog.xml", item["name"]).replace(
+                        "/catalog/", "/dodsC/"
+                    )
     return references
 
 
