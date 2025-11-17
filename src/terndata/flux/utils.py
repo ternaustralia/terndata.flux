@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 
 import defusedxml.ElementTree as ET
@@ -40,8 +41,9 @@ def get_catalog_items(url: str, itype: str = "catalogRef") -> dict[str, str]:
             # This assumes daily, monthly datasets, etc end with daily, monthly, etc in their
             # dataset name.
             name = item["name"]
-            if name.endswith(".nc"):
-                parts = name[:-3].split("_")
+            # Look for dataset ncml file instead of netcdf file
+            if name.endswith(".ncml"):
+                parts = os.path.splitext(name)[0].split("_")
                 ds_name = DEFAULT_DATASET
                 if len(parts) >= 3 and parts[-1].lower() in [
                     "daily",
