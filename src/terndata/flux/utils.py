@@ -13,7 +13,7 @@ xlinkns = "{http://www.w3.org/1999/xlink}"
 
 # Session for request, with User-Agent header
 session = requests.Session()
-session.headers.update({"User-Agent": "TERN-DATA-PACKAGE/flux-api"})
+session.headers.update({"User-Agent": "terndata.flux"})
 
 
 # TODO: pass in API-name that calls this function to be embedded in user-agent,
