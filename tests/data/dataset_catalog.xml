@@ -48,5 +48,13 @@
       <dataSize units="Mbytes">18.61</dataSize>
       <date type="modified">2024-08-30T11:26:24Z</date>
     </dataset>
+    <dataset name="AdelaideRiver_L3.ncml" ID="ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/AdelaideRiver_L3.ncml" urlPath="ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/AdelaideRiver_L3.ncml">
+    <dataSize units="bytes">248.0</dataSize>
+    <date type="modified">2025-11-15T02:51:39Z</date>
+    </dataset>
+    <dataset name="AdelaideRiver_L3_Summary.nc" ID="ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/AdelaideRiver_L3_Summary.nc" urlPath="ecosystem_process/ozflux/AdelaideRiver/2024_v2/L6/default/AdelaideRiver_L3_Summary.nc">
+    <dataSize units="Mbytes">7.574</dataSize>
+    <date type="modified">2024-09-06T06:29:28Z</date>
+    </dataset>
   </dataset>
 </catalog>

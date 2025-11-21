@@ -67,29 +67,42 @@ def test_get_catalog_items_dataset_catalog_url(session_mock):
     # Test get dataset urls from dataset catalog page
     url = "https://dap.tern.org.au/thredds/catalog/ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/catalog.xml"
 
+    # Some fake L3 data with summary added
     with open(os.path.join(current_dir, "data/dataset_catalog.xml")) as f1:
         session_mock.return_value = mocked_response(f1.read())
 
     items = utils.get_catalog_items(url, itype="dataset")
 
     # Check that the dataset urls are as expected
-    assert set(items.keys()) == {"30min"}
+    assert set(items.keys()) == {"30min", "summary"}
+    # Check that a ncml file is returned
     assert (
         items.get("30min")
-        == "https://dap.tern.org.au/thredds/dodsC/ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/AdelaideRiver_L3.nc"
+        == "https://dap.tern.org.au/thredds/dodsC/ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/AdelaideRiver_L3.ncml"
+    )
+    # Check that a netcdf file is returned for summary
+    assert (
+        items.get("summary")
+        == "https://dap.tern.org.au/thredds/dodsC/ecosystem_process/ozflux/AdelaideRiver/2024_v2/L3/default/AdelaideRiver_L3_Summary.nc"
     )
 
 
 def test_get_dataset_urls(session_mock):
     # Test get dataset url
+    # Some fake L3 data with summary added
     with open(os.path.join(current_dir, "data/dataset_catalog.xml")) as f1:
         session_mock.return_value = mocked_response(f1.read())
 
     urls = utils.get_dataset_urls("AdelaideRiver", "new_version", "L3")
 
     # Check that the dataset urls are as expected
-    assert set(urls.keys()) == {"30min"}
+    assert set(urls.keys()) == {"30min", "summary"}
     assert (
         urls.get("30min")
-        == "https://dap.tern.org.au/thredds/dodsC/ecosystem_process/ozflux/AdelaideRiver/new_version/L3/default/AdelaideRiver_L3.nc"
+        == "https://dap.tern.org.au/thredds/dodsC/ecosystem_process/ozflux/AdelaideRiver/new_version/L3/default/AdelaideRiver_L3.ncml"
+    )
+    # Check that a netcdf file is returned for summary
+    assert (
+        urls.get("summary")
+        == "https://dap.tern.org.au/thredds/dodsC/ecosystem_process/ozflux/AdelaideRiver/new_version/L3/default/AdelaideRiver_L3_Summary.nc"
     )
