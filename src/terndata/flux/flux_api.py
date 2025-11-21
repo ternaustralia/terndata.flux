@@ -195,7 +195,16 @@ def _get_location(site: str) -> dict:
     """
     # Based on the latest version, L6, 30-min dataset.
     latest_version = max(get_versions(site))
-    dataset = get_dataset(site, latest_version, "L6")
+
+    # Some sites (i.e. DryRiver) may not have L6 30-min netcdf files.
+    # Get from one of the processing levels available
+    for plevel in ["L6", "L5", "L4", "L3"]:
+        try:
+            dataset = get_dataset(site, latest_version, plevel)
+            if dataset:
+                break
+        except Exception as e:
+            continue
     return {
         "site": site,
         "longitude": float(dataset.coords["longitude"].data[0]),
